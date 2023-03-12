@@ -1,3 +1,7 @@
+
+# PWM
+Un signal PWM est un signal carré sur lequel 2 charactéristque son important : sa fréquence est son duty-cycle. Sa fréquence détermine combien de fois il pas de haut bas haut en un cycle et son duty-cycle est le pourcentage de temps il est en haut par rapport a un cycle complet.
+
 # ADC READ
 Ce code lit la valeur d'un "rotary angle sensor". Le microcontrôleur reçois une valeur analogique et l'interprète sur 16 bits (65536 valeurs). Pour y arriver il divise 5V en 65536 pas et compare ces pas a la tension qu'il reçois. Par exemple s’il reçois 0.7514V il sait qu'on lui a envoyé la valeur 10000.
 La fonction ADC() est la même idée que Pin("numéro de pin", pin.IN) mais pour un ADC.
