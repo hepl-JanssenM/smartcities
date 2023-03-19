@@ -14,9 +14,12 @@ print(text): affiche le text dans print sur le display (string et charactere ASC
 write(text) : affiche les charctere dont la valeur binnaire ou hex sont données dans ce tableau:
 
 ![1TKZH](https://user-images.githubusercontent.com/124840260/226204461-12059a18-cf78-4fda-8daa-f1aa4940b7ba.gif)
+
+Le code code de la library LCD1602 peut être trouvé ici https://github.com/TinkerGen/Pico-micropython
  
 # lcd_HelloWorld
  Ce code affiche le texte hello world sur deux ligne:
+ 
  ![MicrosoftTeams-image](https://user-images.githubusercontent.com/124840260/226204931-891c101c-6c9e-4e5b-b032-673ff4c3b9b3.png)
  
  # lcd_Angle
