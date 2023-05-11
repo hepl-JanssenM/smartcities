@@ -7,4 +7,7 @@ Ce programme utilise la capteur DHT11 pour prend une messure de temperature et d
 
 # humidityTempDetector
 
-Ce programme messure la temperature et l'humidité et si la valeur dépasse un seuil un buzer s'allume et previen l'utilisateur que la valeur a été dépassé.![38907980-c146-4257-a595-e7afe1951962](https://github.com/hepl-JanssenM/smartcities/assets/124840260/8adffe47-9463-4979-9bf2-4f73e96f64f7)
+Ce programme messure la temperature et l'humidité et si la valeur dépasse un seuil un buzer s'allume et previen l'utilisateur que la valeur a été dépassé.
+
+https://github.com/hepl-JanssenM/smartcities/assets/124840260/5db39fb4-a8d8-4849-92cc-cddb6d5e38e3
+
