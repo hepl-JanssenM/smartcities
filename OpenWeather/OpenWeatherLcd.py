@@ -4,6 +4,7 @@ import struct
 from secrets import *        
 import utime
 import urequests
+from lcd1602 import LCD1602  #on importe la librairie qui permet d'utiliser le LCD
 
 
 def get_time(offset=7200, delta=2208988800, host="pool.ntp.org"): 
@@ -101,32 +102,13 @@ print("Minimum temperature today: ",round(temp_min-273.15,1),"°C")
 print("Maximum temperature today: ",round(temp_max-273.15,1),"°C")
 print("Relative humidity: ",round(humidity),"%")
 
-
-
-from lcd1602 import LCD1602  #on importe la librairie qui permet d'utiliser le LCD
-
-
-
-filename = "CSV.csv"
-
-
-
 i2c = I2C(1,scl=Pin(7), sda=Pin(6), freq=400000) #on définit la pin (voir github)
 d = LCD1602(i2c, 2, 16)      #i2c définit le type de données, 2 = le nombre de ligne = 16 le nombre de caratère par ligne;
 d.display()                  #active l'affichage du LCD
 d.setCursor(0, 0) 
-d.clear()                  
-
-
-
-d.print(str(rtc.datetime()[2]) +"/" + str(rtc.datetime()[1]) + " ")     #Affiche la date à partir de la ligne 0 et caractère 0              
-d.print(str(rtc.datetime()[4]) +"h" + str(rtc.datetime()[5]) +"m" + str(rtc.datetime()[6])+"s") #Affiche l'heure, les minutes et les secondes à la position de la précèdente ligne
-
-d.setCursor(0, 0) 
 d.clear()                    #efface l'affichage du LCD
-d.print(str(rtc.datetime()[2]) +"/" + str(rtc.datetime()[1]) + " ")     #Affiche la date à partir de la ligne 0 et caractère 0              
-d.print(str(rtc.datetime()[4]) +"h" + str(rtc.datetime()[5]) +"m" + str(rtc.datetime()[6])+"s") #Affiche l'heure, les minutes et les secondes à la position de la précèdente ligne
-d.setCursor(0,1)
+d.print(str(rtc.datetime()[2]) +"/" + str(rtc.datetime()[1]) + " ")     #Affiche la date             
+d.print(str(rtc.datetime()[4]) +"h" + str(rtc.datetime()[5]) +"m" + str(rtc.datetime()[6])+"s") #Affiche l'heure les minutes et les secondes 
 d.print("temp: " + str(round(temp-273.15,1)))
     
     
